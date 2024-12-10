@@ -42,7 +42,7 @@ export const Navbar = () => {
                 color="foreground"
                 href={item.href}
               >
-                <h2>{item.label}</h2>
+                <h2 className="font-semibold">{item.label}</h2>
               </Link>
             </NavbarItem>
           ))}

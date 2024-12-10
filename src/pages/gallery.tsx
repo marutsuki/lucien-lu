@@ -116,7 +116,6 @@ export default function GalleryPage() {
           scrollbar={{ draggable: true }}
           slidesPerView={3}
           spaceBetween={50}
-          
         >
           {items.map((item, index) => (
             <SwiperSlide key={index}>

@@ -8,6 +8,10 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
+    {
+      label: "About",
+      href: "/about",
+    },
   ],
   links: {
     github: "https://github.com/nextui-org/nextui",

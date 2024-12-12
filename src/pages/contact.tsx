@@ -3,11 +3,11 @@ import {
   CardBody,
   CardHeader,
   Divider,
-  Image,
   Snippet,
 } from "@nextui-org/react";
 
 import DefaultLayout from "@/layouts/default";
+import { Logo } from "@/components/icons";
 export default function ContactPage() {
   return (
     <DefaultLayout>
@@ -19,12 +19,7 @@ export default function ContactPage() {
           </CardHeader>
           <CardBody>
             <Divider />
-            <Image
-              alt="logo"
-              className="dark:invert"
-              src="/marutsuki.png"
-              width={240}
-            />
+            <Logo size={240} />
             <h2 className="font-semibold">Email</h2>
             <Snippet>lucien.7789@gmail.com</Snippet>
             <h2 className="font-semibold">Phone</h2>

@@ -10,6 +10,7 @@ export const Logo: React.FC<React.HTMLProps<HTMLImageElement>> = ({
 }) => (
   <img
     alt="logo"
+    className="dark:invert"
     height={size || height}
     src="/marutsuki.png"
     width={size || width}

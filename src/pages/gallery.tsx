@@ -24,6 +24,7 @@ import {
 } from "swiper/modules";
 
 import DefaultLayout from "@/layouts/default";
+import { config } from "@/config/gallery";
 
 type GalleryItem = {
   src: string;
@@ -100,6 +101,7 @@ export default function GalleryPage() {
       <section className="gap-4">
         <Swiper
           navigation
+          breakpoints={config}
           modules={[
             Autoplay,
             EffectCards,

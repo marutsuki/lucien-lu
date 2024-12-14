@@ -5,6 +5,8 @@ import {
   NavbarContent,
   NavbarItem,
   NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
@@ -72,7 +74,24 @@ export const Navbar = () => {
           <GithubIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
+
         <NavbarMenuToggle />
+        <NavbarMenu>
+          {siteConfig.navItems.map((item) => (
+            <NavbarMenuItem key={item.href}>
+              <Link
+                className={clsx(
+                  linkStyles({ color: "foreground" }),
+                  "data-[active=true]:text-primary data-[active=true]:font-medium items-end"
+                )}
+                color="foreground"
+                href={item.href}
+              >
+                <h2 className="font-semibold">{item.label}</h2>
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
       </NavbarContent>
     </NextUINavbar>
   );
